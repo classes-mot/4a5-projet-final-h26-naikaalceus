@@ -1,4 +1,4 @@
-const SONGS = [
+export const SONGS = [
     {
         id: "s1",
         title: "ALL UP IN YOUR MIND",
