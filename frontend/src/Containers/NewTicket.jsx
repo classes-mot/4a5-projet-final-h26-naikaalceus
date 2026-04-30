@@ -1,4 +1,4 @@
-import TicketForm from "../components/ticketForm/ticketForm";
+import TicketForm from "../components/ticketForm/TicketForm";
 const NewTicket = () => {
     return <TicketForm />
 };
