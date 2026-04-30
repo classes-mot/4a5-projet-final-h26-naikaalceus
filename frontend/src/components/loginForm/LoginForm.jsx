@@ -1,6 +1,7 @@
 import { AuthContext } from "../../context/auth-context";
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function LoginForm() {
 
@@ -53,9 +54,13 @@ export default function LoginForm() {
                     </div>
                 </div>
 
+                <div>
+                    <p>Vous n'avez pas de compte ? <Link to="/subscribe">S'inscrice</Link></p>
+                </div>
+
                 <p>
                     <button type="reset">Réinitialiser</button>
-                    <button type="submit">See connecter</button>
+                    <button type="submit">Se connecter</button>
 
                 </p>
             </form>
