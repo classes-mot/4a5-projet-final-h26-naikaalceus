@@ -65,23 +65,23 @@ const TicketForm = () => {
                     <div>
                         <label>Location</label>
                         <select name="location" value={formData.location} onChange={handleChange}>
-                            <option value="Beyoncé">Beyoncé</option>
-                            <option value="Kittie">Kittie</option>
-                            <option value="MeganTS">Megan thee Stallion</option>
-                            <option value="MenITrust">Men I Trust</option>
-                            <option value="PinkPantheress">PinkPantheress</option>
-                            <option value="SteveLacy">Steve Lacy</option>
+                            <option value="Montreal">Montréal, CA</option>
+                            <option value="Toronto">Toronto, CA</option>
+                            <option value="Vancouver">Vancouver, CA</option>
+                            <option value="Chicago">Chicago, ÉUA</option>
+                            <option value="NewYork">New York, ÉUA</option>
+                            <option value="LA">Los Angeles, ÉUA</option>
                         </select>
                     </div>
 
                     <div>
                         <label>Date</label>
                         <select name="date" value={formData.data} onChange={handleChange}>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option value="160427">16 avril 2027</option>
+                            <option value="060527">6 main 2027</option>
+                            <option value="080527">8 main 2027</option>
+                            <option value="100727">10 juin 2027</option>
+                            <option value="110727">11 juin 2027</option>
 
                         </select>
                     </div>
