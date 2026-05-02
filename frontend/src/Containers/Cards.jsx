@@ -5,9 +5,7 @@ import { TICKETS } from "../data/tickets";
 
 const Cards = () => {
 
-    return (
-    <SongList items={SONGS} />
-    <TicketList items={TICKETS} />
- );
-;
+    return <SongList items={SONGS} /> && <TicketList items={TICKETS} />;
+
+};
 export default Cards;
