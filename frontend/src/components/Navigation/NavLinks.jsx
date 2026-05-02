@@ -8,6 +8,9 @@ const NavLinks = () => {
 
     return (
         <ul>
+            <li>
+                <NavLink to="/" end>Menu</NavLink>
+            </li>
 
             {auth.loggedIn && (
                 <li>
@@ -19,7 +22,7 @@ const NavLinks = () => {
             {!auth.loggedIn ? (
                 <>
                     <li>
-                        <NavLink to="/auth"></NavLink>
+                        <NavLink to="/auth">Se connecter</NavLink>
                         <NavLink to="/subscribe">S'inscrire</NavLink>
                     </li>
                 </>
