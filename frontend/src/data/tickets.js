@@ -1,4 +1,4 @@
-export const tickets = [
+export const TICKETS = [
     {
         id: "t1",
         artist: "Megan thee Stallion",
