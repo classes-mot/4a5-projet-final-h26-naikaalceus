@@ -1,27 +1,21 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../../context/auth-context";
+//import { usest } from "react";
+import NavLinks from "./NavLinks";
+
 
 const MainNavigation = () => {
 
-    const auth = useContext(AuthContext);
+  
     return (
         <>
 
             <header>
                 <h1>
-                    {!auth.logged ? (
-                        <>
-                            <li>
-                                <Link to="/menu">Menu</Link>
-                            </li>
-                        </>
-                    ) : (
-                        <li>
-                            <Link to="/songs">Menu</Link>
-                        </li>
-                    )}
+                  <Link to="/">Menu</Link>
                 </h1>
+                <nav>
+                    <NavLinks/>
+                </nav>
             </header>
 
         </>
