@@ -42,6 +42,12 @@
     background-color: #dea8ee;
 }
 
+ul {
+    list-style: none;
+    align-items: center;
+    text-align: left;
+}
+
 .error {
     color: #e92a4a;
     font-size: 0.75rem;

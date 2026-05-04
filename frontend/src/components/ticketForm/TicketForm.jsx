@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Card from "../UIElements/Card";
+import "./TicketForm.css";
 
 const TicketForm = () => {
     const navigate = useNavigate();
@@ -46,11 +47,11 @@ const TicketForm = () => {
         navigate("/");
     };
     return (
-        <div>
-            <Card>
+        <div className="form">
+            <Card className="form_card">
                 <h2>{ticketId ? "Modifier le ticket" : "Ajouter le ticket"}</h2>
                 <form onSubmit={handleSubmit}>
-                    <div>
+                    <div className="control">
                         <label>Artiste</label>
                         <select name="artist" value={formData.artist} onChange={handleChange}>
                             <option value="Beyoncé">Beyoncé</option>
@@ -62,7 +63,7 @@ const TicketForm = () => {
                         </select>
                     </div>
 
-                    <div>
+                    <div className="control">
                         <label>Location</label>
                         <select name="location" value={formData.location} onChange={handleChange}>
                             <option value="Montreal">Montréal, CA</option>
@@ -74,7 +75,7 @@ const TicketForm = () => {
                         </select>
                     </div>
 
-                    <div>
+                    <div className="control">
                         <label>Date</label>
                         <select name="date" value={formData.data} onChange={handleChange}>
                             <option value="160427">16 avril 2027</option>
@@ -86,16 +87,22 @@ const TicketForm = () => {
                         </select>
                     </div>
 
-                    <div>
+                    <div className="control">
                         <label>Forfait</label>
-                        <input type="radio" id="forfait-base" name="forfait" value="deBase" />
-                        <label for="forfait-base">De base</label>
-                        <input type="radio" id="forfait-vip" name="forfait" value="vip" />
-                        <label for="forfait-vip">VIP</label>
+                        <ul>
+                            <li>
+                                <input type="radio" id="forfait-base" name="forfait" value="deBase" />
+                                <label for="forfait-base">De base</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="forfait-vip" name="forfait" value="vip" />
+                                <label for="forfait-vip">VIP</label>
+                            </li>
+                        </ul>
                     </div>
-                    <div>
-                        <button type="onSubmit">Enregistrer</button>
-                        <button type="onSubmit" onClick={() => navigate("/")}>Annuler</button>
+                    <div className="btn_actions">
+                        <button type="onSubmit" className="button_enregistrer">Enregistrer</button>
+                        <button className="button_annuler" type="onSubmit" onClick={() => navigate("/")}>Annuler</button>
                     </div>
 
                 </form>
