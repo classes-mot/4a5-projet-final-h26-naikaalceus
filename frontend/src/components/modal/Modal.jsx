@@ -3,17 +3,17 @@ import Card from "../UIElements/Card";
 
 const Modal = (props) => {
     const content = (
-        <div>
-            <Card onClick={(event) => event.stopPropagation()}>
-                <header>
+        <div className="modal">
+            <Card className="modal_container" onClick={(event) => event.stopPropagation()}>
+                <header className="modal_header">
                     <h2>{props.title || "Confirmation"}</h2>
                 </header>
-                <div>
+                <div className="modal_body">
                     {props.children}
                 </div>
-                <footer>
-                    <button onClick={props.onCancel}>Annuler</button>
-                    <button onClick={props.onConfirm}>Confirmer</button>
+                <footer modal_footer>
+                    <button className="btn_cancel" onClick={props.onCancel}>Annuler</button>
+                    <button className="btn_confirm" onClick={props.onConfirm}>Confirmer</button>
                 </footer>
             </Card>
         </div>
