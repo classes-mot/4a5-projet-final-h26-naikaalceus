@@ -1,0 +1,56 @@
+.TicketCard {
+    margin: 2rem;
+    list-style: none;
+    width: 500px;
+}
+
+.TicketCard_content {
+    padding: 0;
+    text-align: center;
+    border: 0.5px solid, #95549e;
+    transition: transform 0.3s ease;
+}
+
+.TicketCard_content:hover {
+    transform: scale(1.05);
+}
+
+.TicketCard_info h2 {
+    color: #ffffff;
+    margin: 0.5rem 0;
+}
+
+.TicketCard_actions {
+    padding: 1rem;
+    border-top: 1px solid #95549e;
+    justify-content: right;
+    gap: 10px;
+}
+
+.button {
+    background-color: #dea8ee;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer
+}
+
+.button:hover {
+    background-color: #c594d4;
+}
+
+.button_outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #dea8ee;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer
+}
+
+.button_outline:hover {
+    border: 1.5px solid #c594d4;
+}
