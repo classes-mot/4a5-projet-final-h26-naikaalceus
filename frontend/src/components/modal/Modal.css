@@ -1,0 +1,57 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal_container {
+    width: 90%;
+    max-width: 400px;
+    padding: 0 !important;
+    background-image: url(../../../../../Documents/tp-final-web/OIP-2660696639.jpg);
+    background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+
+.modal_header {
+    background: #ad76c7;
+    color: white;
+    padding: 1rem;
+}
+
+.modal_body {
+    padding: 1.5rem;
+}
+
+.modal_footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn_confirm {
+    background-color: #dea8ee;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn_cancel {
+    background: #ccc;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
