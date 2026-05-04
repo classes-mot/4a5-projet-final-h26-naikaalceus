@@ -76,7 +76,7 @@ const App = () => {
         userId: userId,
         email: userEmail,
         login: login,
-        logout, logout
+        logout: logout
     };
 
     return (
