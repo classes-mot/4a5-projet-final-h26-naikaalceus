@@ -57,34 +57,34 @@ const SongForm = () => {
         navigate("/");
     };
     return (
-        <div>
-            <Card>
-                <h2>{songId ? "Modifier la chanson" : "Ajouter la chanson"}</h2>
+        <div className="form">
+            <Card className="form_card">
+                <h2 className="title">{songId ? "Modifier la chanson" : "Ajouter la chanson"}</h2>
                 <form onSubmit={handleSubmit}>
-                    <div>
+                    <div className="control">
                         <label>Titre</label>
                         <input type="text" name="title" value={formData.title} onChange={handleChange} />
-                        {errors.title && <span>{errors.title}</span>}
+                        {errors.title && <span className="error">{errors.title}</span>}
                     </div>
 
-                    <div>
+                    <div className="control">
                         <label>Artiste</label>
                         <input type="text" name="artist" value={formData.artist} onChange={handleChange} />
-                        {errors.artist && <span>{errors.artist}</span>}
+                        {errors.artist && <span className="error">{errors.artist}</span>}
                     </div>
 
-                    <div>
+                    <div className="control">
                         <label>Album</label>
                         <input type="text" name="album" value={formData.album} onChange={handleChange} />
                     </div>
 
-                    <div>
+                    <div className="control">
                         <label>Date de publication</label>
                         <input type="text" name="releaseYear" value={formData.releaseYear} onChange={handleChange} placeholder="ex: 1999" />
                     </div>
-                    <div>
-                        <button type="onSubmit">Enregistrer</button>
-                        <button type="onSubmit" onClick={() => navigate("/")}>Annuler</button>
+                    <div className="btn_actions">
+                        <button type="onSubmit" className="button_enregistrer">Enregistrer</button>
+                        <button className="button_annuler" type="onSubmit" onClick={() => navigate("/")}>Annuler</button>
                     </div>
 
                 </form>
