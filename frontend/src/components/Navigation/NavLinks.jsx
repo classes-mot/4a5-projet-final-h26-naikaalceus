@@ -14,10 +14,20 @@ const NavLinks = () => {
             </li>
 
             {auth.loggedIn && (
+                <>
                 <li>
                     <NavLink to="/newSong">Ajouter une chanson</NavLink>
-                    <NavLink to="/newTicket">Ajouter un ticket</NavLink>
                 </li>
+                <li>
+                        <NavLink to="/newTicket">Ajouter un ticket</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/songs">Chansons</NavLink>
+                    </li>
+                     <li>
+                        <NavLink to="/tickets">Tickets</NavLink>
+                    </li>
+                    </>
             )}
 
             {!auth.loggedIn ? (
