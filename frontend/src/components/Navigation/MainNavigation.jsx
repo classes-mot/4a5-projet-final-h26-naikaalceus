@@ -19,13 +19,14 @@ const MainNavigation = () => {
     return (
         <>
             {drawerIsOpen && <Backdrop onClick={closeDrawer} />}
-            {drawerIsOpen && (<SideDrawer onClick={closeDrawer}>
-                <nav>
-                    <NavLinks />
-                </nav>
-            </SideDrawer>)}
+            {drawerIsOpen && (
+                <SideDrawer onClick={closeDrawer}>
+                    <nav className_>
+                        <NavLinks />
+                    </nav>
+                </SideDrawer>)}
             <header className="main-header">
-                <button onClick={openDrawer}>
+                <button className="main-navigation_MenuButton" onClick={openDrawer}>
                     <span />
                     <span />
                     <span />
