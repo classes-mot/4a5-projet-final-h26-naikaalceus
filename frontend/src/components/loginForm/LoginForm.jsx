@@ -39,7 +39,9 @@ export default function LoginForm() {
     return (
         <div className="container">
             <form onSubmit={authSubmitHandler} className="form">
-                <h2>Connexion</h2>
+                <h2 className="title">Connexion</h2>
+
+                <hr className="hr_control" />
 
                 <div className="control-row">
                     <div className="control">
@@ -48,7 +50,7 @@ export default function LoginForm() {
                             id="email"
                             type="email"
                             name="courriel"
-                            className={emailVide ? "input_valid" : ""}
+                            className={emailVide ? "input_valide" : ""}
                         />
                         {emailVide && <div className="msg_erreur">Le courriel est requis</div>}
                     </div>
@@ -59,20 +61,24 @@ export default function LoginForm() {
                             id="password"
                             type="password"
                             name="password"
-                            className={mdpVide ? "input_valid" : ""}
+                            className={mdpVide ? "input_valide" : ""}
                         />
                         {mdpVide && <div className="msg_erreur">Le mot de passe est requis</div>}
                     </div>
                 </div>
 
+                <hr className="hr_control" />
+
                 <div>
-                    <p>Vous n'avez pas de compte ? <Link to="/subscribe" className="lien">S'inscrice</Link></p>
+                    <p>Vous n'avez pas de compte ? <Link to="/subscribe" className="lien">S'inscrire</Link></p>
                 </div>
 
-                <p>
-                    <button type="submit" className="button button_submit">Se connecter</button>
-                    <button type="reset" className="button button_outline">Réinitialiser</button>
-                </p>
+                <div className="btn_actions">
+                    <p>
+                        <button type="submit" className="button">Se connecter</button>
+                        <button type="reset" className="button_outline">Réinitialiser</button>
+                    </p>
+                </div>
             </form>
         </div>
     );

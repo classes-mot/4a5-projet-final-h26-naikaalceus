@@ -1,3 +1,8 @@
+p {
+    color: #ffffff;
+}
+
+
 .container {
     display: flex;
     justify-content: center;
@@ -6,12 +11,10 @@
 }
 
 .form {
-    background-image: url("../images/OIP-2660696639.jpg");
     padding: 2rem;
     border-radius: 25px;
-    box-shadow: 0 40x 15px #ae9db3;
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
 }
 
 .title {
@@ -29,8 +32,8 @@
 
 .control_row {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 5rem;
+    margin-bottom: 5rem;
 }
 
 .control {
@@ -44,7 +47,7 @@
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 0.3rem;
-    font-size: 0.90rem;
+    font-size: 2.5rem;
 }
 
 
@@ -53,11 +56,12 @@
     border: 1px solid #5d1d70;
     border-radius: 5px;
     outline: none;
+    background: transparent;
 }
 
 .control input:focus {
-    border-color: #371042;
-    background-color: #dea8ee;
+    border-color: #eddef1;
+    background-color: #eddef1;
 }
 
 .input_invalide {
@@ -74,7 +78,7 @@
 }
 
 .lien {
-    color: #dea8ee;
+    color: #795585;
     text-decoration: none;
 }
 
@@ -86,7 +90,7 @@
 .btn_actions {
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 1.5rem;
 }
 
@@ -107,7 +111,7 @@
 .button_outline {
     background: transparent;
     color: #ffffff;
-    border: 1px solid #dea8ee;
+    border: 1.5px solid #dea8ee;
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
     font-weight: bold;
@@ -115,7 +119,8 @@
 }
 
 .button_outline:hover {
-    border: 1.5px solid #c594d4;
+    border: 1px solid #c594d4;
+    background-color: #c594d4;
 }
 
 .hr_control {
