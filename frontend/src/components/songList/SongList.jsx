@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/auth-context";
 import Modal from "../modal/Modal";
 import { useState, useEffect, useContext } from "react";
+import "./SongList.css";
 
 const SongList = (props) => {
 
@@ -31,14 +32,14 @@ const SongList = (props) => {
     }
 
     return (
-        <div>
+        <div className="list_container">
             {showModal && (
                 <Modal titre="Confirmer la suppression" onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
                     <p>Êtes-vous sûr de vouloir supprimer cette chanson ? Vous ne pourrez plus l'écouter :(</p>
                 </Modal>
             )}
             <div>
-                {auth.loggedIn && (<Link to="/newSong">Ajouter une chanson</Link>)}
+                {auth.loggedIn && (<Link to="/newSong" className="button">Ajouter une chanson</Link>)}
             </div>
         </div>
     );
