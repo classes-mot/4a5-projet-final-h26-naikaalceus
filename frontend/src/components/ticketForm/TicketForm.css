@@ -32,14 +32,21 @@
 
 .control select {
     padding: 0.7rem;
-    border: 1px solid #5d1d70;
-    border-radius: 5px;
+    border: none;
     outline: none;
+    background: transparent;
+    color: #ffffff;
 }
 
-.control input:focus {
-    border-color: #371042;
-    background-color: #dea8ee;
+.control select:focus {
+    border-color: #f1c6fd;
+    background-color: #f2cbfd;
+    opacity: 0.75;
+}
+.control select:hover {
+    border-color: #f1c6fd;
+    background-color: #f2cbfd;
+    opacity: 0.75;
 }
 
 ul {

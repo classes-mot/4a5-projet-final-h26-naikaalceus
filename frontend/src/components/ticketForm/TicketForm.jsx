@@ -49,7 +49,7 @@ const TicketForm = () => {
     return (
         <div className="form">
             <Card className="form_card">
-                <h2>{ticketId ? "Modifier le ticket" : "Ajouter le ticket"}</h2>
+                <h2 className="title">{ticketId ? "Modifier le ticket" : "Ajouter un ticket"}</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="control">
                         <label>Artiste</label>
