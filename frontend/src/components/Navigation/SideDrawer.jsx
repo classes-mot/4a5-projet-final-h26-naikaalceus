@@ -1,8 +1,9 @@
 import { createPortal } from "react-dom";
+import "./SideDrawer.css";
 
 const SideDrawer = (props) => {
     const content = (
-        <aside onClick={props.onClick}>
+        <aside className="side-drawer" onClick={props.onClick}>
             {props.chidlren}
         </aside>
     );
