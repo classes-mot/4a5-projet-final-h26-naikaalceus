@@ -14,7 +14,7 @@ export default function Signup() {
         const fd = new FormData(event.target);
         const data = Object.fromEntries(fd.entries());
 
-        if (data.psswd !== data["confirmer-mdp"]) {
+        if (data.password !== data["confirmer-mdp"]) {
             console.log("Les mots de passes sont différents")
             setPsswdNotEqual(true);
             return;
@@ -39,7 +39,7 @@ export default function Signup() {
                 <div className="control-row">
                     <div className="control">
                         <label htmlFor="password">Mot de passe</label>
-                        <input id="password" type="password" name="password" />
+                        <input id="password" type="password" name="password" required />
                     </div>
                     <div className="control">
                         <label htmlFor="confirmer-mdp">Confirmez le mot de passe</label>
