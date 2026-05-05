@@ -40,11 +40,11 @@ const TicketForm = () => {
         if (ticketId) {
             storedTickets = storedTickets.map((ticket) => (ticket.id === ticketId ? { ...formData } : ticket));
         } else {
-            const newTicket = { ...formData, id: "ticket" + Math.random().toString(36).substring(2, 4) };
+            const newTicket = { ...formData, id: Date.now().toString() };
             storedTickets.push(newTicket);
         }
         localStorage.setItem("tickets", JSON.stringify(storedTickets));
-        navigate("/");
+        navigate("/tickets");
     };
     return (
         <div className="form">
@@ -102,7 +102,7 @@ const TicketForm = () => {
                     </div>
                     <div className="btn_actions">
                         <button type="onSubmit" className="button_enregistrer">Enregistrer</button>
-                        <button className="button_annuler" type="onSubmit" onClick={() => navigate("/")}>Annuler</button>
+                        <button className="button_annuler" type="onCancel" onClick={() => navigate("/")}>Annuler</button>
                     </div>
 
                 </form>
