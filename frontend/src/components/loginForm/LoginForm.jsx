@@ -21,18 +21,18 @@ export default function LoginForm() {
         setMdpVide(false)
 
         let valid = true;
-        if (!data.email) {
+        if (!data.courriel) {
             setEmailVide(true);
             valid = false;
         }
 
-        if (!data.psswd === "") {
+        if (!data.password === "") {
             setMdpVide(true);
             valid = false;
         }
 
         if (valid) {
-            auth.login("ul", data.email);
+            auth.login("ul", data.courriel);
             navigate("/");
         }
     };
@@ -50,7 +50,7 @@ export default function LoginForm() {
                             id="email"
                             type="email"
                             name="courriel"
-                            className={emailVide ? "input_valide" : ""}
+                            className={emailVide ? "input_invalide" : ""}
                         />
                         {emailVide && <div className="msg_erreur">Le courriel est requis</div>}
                     </div>
@@ -61,7 +61,7 @@ export default function LoginForm() {
                             id="password"
                             type="password"
                             name="password"
-                            className={mdpVide ? "input_valide" : ""}
+                            className={mdpVide ? "input_invalide" : ""}
                         />
                         {mdpVide && <div className="msg_erreur">Le mot de passe est requis</div>}
                     </div>
