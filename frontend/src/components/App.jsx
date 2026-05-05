@@ -10,6 +10,7 @@ import NewTicket from "../Containers/NewTicket";
 import UpdateSong from "../Containers/UpdateSong";
 import UpdateTicket from "../Containers/UpdateTicket";
 import Cards from "../Containers/Cards";
+import Acceuil from "../Containers/Acceuil";
 
 const App = () => {
 
@@ -59,7 +60,7 @@ const App = () => {
             element: <RootLayout />,
             errorElement: <ErrorPage />,
             children: [
-                { path: "", element: <Cards /> },
+                { path: "menu", element: <Acceuil /> },
                 { path: "auth", element: <Auth /> },
                 { path: "subscribe", element: <Subscribe /> },
                 { path: "newSong", element: <Navigate to="/auth" replace /> },
