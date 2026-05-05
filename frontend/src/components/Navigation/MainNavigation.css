@@ -1,10 +1,10 @@
 main {
-  margin-top: 6rem;    
-  margin-left: auto;   
-  margin-right: auto;  
-  padding: 1rem;       
-  max-width: 1200px;   
-  min-height: 80vh;   
+  margin-top: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  max-width: 1200px;
+  min-height: 80vh;
 }
 
 .main-header {
@@ -34,4 +34,23 @@ main {
 
 .main-navigation__header-nav {
   display: none;
+}
+
+.main-navigation_MenuButton {
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.main-navigation_MenuButton span {
+  display: block;
+  width: 2.5rem;
+  height: 2.5px;
+  background: transparent;
 }
