@@ -9,7 +9,8 @@ import NewSong from "../Containers/NewSong";
 import NewTicket from "../Containers/NewTicket";
 import UpdateSong from "../Containers/UpdateSong";
 import UpdateTicket from "../Containers/UpdateTicket";
-import Cards from "../Containers/Cards";
+import SongCards from "../Containers/SongCards";
+import TicketCards from "../Containers/TicketCards";
 import Acceuil from "../Containers/Acceuil";
 
 const App = () => {
@@ -43,7 +44,9 @@ const App = () => {
             element: <RootLayout />,
             errorElement: <ErrorPage />,
             children: [
-                { path: "", element: <Cards /> },
+                { path: "/", element: <Acceuil /> },
+                { path: "songs", element: <SongCards /> },
+                { path: "tickets", element: <TicketCards /> },
                 { path: "newSong", element: <NewSong /> },
                 { path: "edit/:songId", element: <UpdateSong /> },
                 { path: "newTicket", element: <NewTicket /> },
@@ -60,7 +63,7 @@ const App = () => {
             element: <RootLayout />,
             errorElement: <ErrorPage />,
             children: [
-                { path: "menu", element: <Acceuil /> },
+                { path: "/", element: <Acceuil /> },
                 { path: "auth", element: <Auth /> },
                 { path: "subscribe", element: <Subscribe /> },
                 { path: "newSong", element: <Navigate to="/auth" replace /> },
