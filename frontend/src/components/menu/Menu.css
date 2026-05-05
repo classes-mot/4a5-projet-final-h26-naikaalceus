@@ -1,8 +1,12 @@
 main {
+    background-image: url("../images/OIP-2660696639.jpg");
+}
+
+.container{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/OIP-2660696639.jpg");
 }
 
 .title {
@@ -45,8 +49,10 @@ main {
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
     font-weight: bold;
-    cursor: pointer
+    cursor: pointer;
+    text-decoration: none;
 }
+
 
 .button:hover {
     background-color: #c594d4;
@@ -57,3 +63,4 @@ main {
     border-top: 1px solid #dea8ee;
     margin: 1.5rem 0;
 }
+
