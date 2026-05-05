@@ -25,6 +25,8 @@ main {
   color: #ffffff;
   font-size: 1.5rem;
   margin: 0;
+  justify-self: center;
+  justify-content: center;
 }
 
 .main-navigation__title a {
@@ -39,8 +41,9 @@ main {
 .main-navigation_MenuButton {
   width: 3rem;
   height: 3rem;
-  background: transparent;
-  border: none;
+  background: #dac0f0;
+  border: 1px solid #dac0f0;
+  border-radius: 75px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

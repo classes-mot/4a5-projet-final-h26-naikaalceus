@@ -21,7 +21,7 @@ const MainNavigation = () => {
             {drawerIsOpen && <Backdrop onClick={closeDrawer} />}
             {drawerIsOpen && (
                 <SideDrawer onClick={closeDrawer}>
-                    <nav className_>
+                    <nav>
                         <NavLinks />
                     </nav>
                 </SideDrawer>)}
@@ -31,7 +31,7 @@ const MainNavigation = () => {
                     <span />
                     <span />
                 </button>
-                <h1 className="main=navigation__title">
+                <h1 className="main-navigation__title">
                     <Link to="/">Menu</Link>
                 </h1>
                 <nav className="main-navigation__header-nav">

@@ -24,8 +24,11 @@ const NavLinks = () => {
                 <>
                     <li>
                         <NavLink to="/auth">Se connecter</NavLink>
+                    </li>
+                    <li>
                         <NavLink to="/subscribe">S'inscrire</NavLink>
                     </li>
+
                 </>
             ) : (
                 <li>
