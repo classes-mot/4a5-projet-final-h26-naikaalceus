@@ -4,7 +4,7 @@ import "./SideDrawer.css";
 const SideDrawer = (props) => {
     const content = (
         <aside className="side-drawer" onClick={props.onClick}>
-            {props.chidlren}
+            {props.children}
         </aside>
     );
 
