@@ -35,7 +35,7 @@
 
 .control {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 1rem;
     flex: 1;
 }
@@ -57,7 +57,7 @@
 
 .control input:focus {
     border-color: #371042;
-    background-color: #dea8ee;
+    background-color: #edc1fa;
 }
 
 .input_invalide {

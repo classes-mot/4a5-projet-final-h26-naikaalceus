@@ -42,7 +42,7 @@ export default function Signup() {
                         <input id="password" type="password" name="password" />
                     </div>
                     <div className="control">
-                        <label>Confirmez le mot de passe</label>
+                        <label htmlFor="confirmer-mdp">Confirmez le mot de passe</label>
                         <input
                             id="confirmer-mdp"
                             type="password"
@@ -62,22 +62,22 @@ export default function Signup() {
                 <div className="control_row">
                     <div className="control">
                         <label htmlFor="first-name">Prénom</label>
-                        <input id="first-name" type="text" name="first-name" />
+                        <input id="first-name" type="text" name="first-name" required />
                     </div>
 
                     <div className="control">
                         <label htmlFor="last-name">Nom</label>
-                        <input id="last-name" type="text" name="last-name" />
+                        <input id="last-name" type="text" name="last-name" required />
                     </div>
                 </div>
-
+                <hr className="hr_control" />
                 <div className="control checkbox">
                     <label htmlFor="terms-and-conditions">
                         <input type="checkbox" id="terns-and-conditions" name="terms" required />
                         J'accepte les conditions générales de ce  site web
                     </label>
                     <label htmlFor="terms-and-conditions">
-                        <input type="checkbox" id="terns-and-conditions" name="terms" required />
+                        <input type="checkbox" id="terns-and-conditions" name="terms" />
                         Je souhaite m"inscrire à l'infolettres de ce site web
                     </label>
                 </div>
@@ -87,8 +87,8 @@ export default function Signup() {
                 </div>
 
                 <p className="btn_actions">
-                    <button type="reset" className="button button_submit">S'inscrire</button>
-                    <button type="reset" className="button button_outline">Réinitialiser</button>
+                    <button type="submit" className="button">S'inscrire</button>
+                    <button type="reset" className="button_outline">Réinitialiser</button>
                 </p>
             </form>
         </div >
