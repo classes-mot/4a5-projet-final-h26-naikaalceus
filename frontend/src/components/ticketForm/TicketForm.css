@@ -84,7 +84,3 @@ ul {
     border-radius: 5px;
     cursor: pointer
 }
-
-.button_annuler:hover {
-    border: 1.5px solid #c594d4;
-}
