@@ -62,6 +62,7 @@ export default function LoginForm() {
                             type="password"
                             name="password"
                             className={mdpVide ? "input_invalide" : ""}
+                            required
                         />
                         {mdpVide && <div className="msg_erreur">Le mot de passe est requis</div>}
                     </div>

@@ -18,7 +18,7 @@ const App = () => {
     const storedUserId = sessionStorage.getItem('userId');
     const storedUserEmail = sessionStorage.getItem('userEmail');
 
-    const [isLoggedIn, setIsLoggedIn] = useState(!storedUserId);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userId, setUserId] = useState(storedUserId);
     const [userEmail, setUserEmail] = useState(storedUserEmail);
 
