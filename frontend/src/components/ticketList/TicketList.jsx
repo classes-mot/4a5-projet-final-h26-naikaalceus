@@ -31,14 +31,14 @@ const TicketList = (props) => {
     }
 
     return (
-        <div>
+        <div className="list-container">
             {showModal && (
                 <Modal titre="Confirmer la suppression" onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
                     <p>Êtes-vous sûr de vouloir supprimer ce ticket ?</p>
                 </Modal>
             )}
             <div>
-                {auth.loggedIn && (<Link to="/newTicket">Ajouter un ticket</Link>)}
+                {auth.loggedIn && (<Link to="/newTicket" className="button">Ajouter un ticket</Link>)}
             </div>
         </div>
     );
