@@ -4,12 +4,59 @@
     padding: 0 1rem;
 }
 
+.list_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+  flex-wrap: wrap; 
+}
+
+.search-bar {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #dea8ee;
+  border-radius: 25px;
+  outline: none;
+  width: 300px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f5e9f8;
+}
+
+.search-bar:hover {
+  border-color: #dea8ee; 
+  background-color: #edd2f5;
+  width: 250px;
+}
+
+.search-bar:focus {
+  border-color: #dea8ee; 
+  background-color: #edd2f5;
+  width: 350px;
+}
+
 .song_list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     grid-template-rows: repeat(auto-fill);
+}
+
+.list-center {
+  text-align: center;
+  margin-top: 5rem;
+  padding: 2rem;
+  background: #f5e9f8;
+  border-radius: 15px;
+  border: 2px dotted #dea8ee;
+}
+
+.list-center p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .button {
