@@ -6,7 +6,7 @@
         "menuMessage_NotLoggedIn": "En vous inscrivant, vous gagnez accès à une bibliothèque de musique complètement personnalisée. Et encore mieux, vous gagnez aussi accès aux ventes de tickets de vos artistes préférés ! ",
         "menuMessage_LoggedIn": "Que souhaitez-vous faire ?",
         "ticket-delete-message": "Êtes-vous sûr.e de vouloir supprimer ce ticket ?",
-        "song-delete-message": "Êtes-vous sûr.e de vouloir supprimer cette chansons ?"
+        "song-delete-message": "Êtes-vous sûr.e de vouloir supprimer cette chanson ?"
     },
     "auth": {
         "signUp": "S'inscrire",
