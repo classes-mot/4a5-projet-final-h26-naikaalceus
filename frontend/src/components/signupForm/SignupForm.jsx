@@ -19,7 +19,7 @@ export default function Signup() {
         const data = Object.fromEntries(fd.entries());
 
         if (data.password !== data["confirmer-mdp"]) {
-            console.log(t('passwd-error'))
+            console.log(t('errors.passwd-error'))
             setPsswdNotEqual(true);
             return;
         }
@@ -32,21 +32,21 @@ export default function Signup() {
     return (
         <div className="container">
             <form className="form" onSubmit={handleSubmit}>
-                <h2 className="title">{t('welcomeMessage')}</h2>
-                <p className="subtitle">{t('info')}</p>
+                <h2 className="title">{t('auth.signUp')}</h2>
+                <p className="subtitle">{t('signup.info')}</p>
 
                 <div className="control">
-                    <label htmlFor="email">{t('email')}</label>
+                    <label htmlFor="email">{t('user-infos.email')}</label>
                     <input id="email" type="email" name="courriel" required />
                 </div>
 
                 <div className="control-row">
                     <div className="control">
-                        <label htmlFor="password">{t('password')}</label>
+                        <label htmlFor="password">{t('user-infos.password')}</label>
                         <input id="password" type="password" name="password" required />
                     </div>
                     <div className="control">
-                        <label htmlFor="confirmer-mdp">{t('passwd-confirm')}</label>
+                        <label htmlFor="confirmer-mdp">{t('signup.passwd-confirm')}</label>
                         <input
                             id="confirmer-mdp"
                             type="password"
@@ -59,40 +59,40 @@ export default function Signup() {
 
                 {passwdNotEqual && (
                     <div className="msg_erreur">
-                        <p>{t('passwd-error')} </p>
+                        <p>{t('errors.passwd-error')} </p>
                     </div>
                 )}
                 <hr className="hr_control" />
                 <div className="control_row">
                     <div className="control">
-                        <label htmlFor="first-name">{t('first-name')}</label>
+                        <label htmlFor="first-name">{t('user-infos.first-name')}</label>
                         <input id="first-name" type="text" name="first-name" required />
                     </div>
 
                     <div className="control">
-                        <label htmlFor="last-name">{t('last-name')}</label>
+                        <label htmlFor="last-name">{t('user-infos.last-name')}</label>
                         <input id="last-name" type="text" name="last-name" required />
                     </div>
                 </div>
                 <hr className="hr_control" />
                 <div className="control checkbox">
                     <label htmlFor="terms-and-conditions">
-                        <input type="checkbox" id="terns-and-conditions" name="terms" required />
-                        {t('terms-and-conditions')}
+                        <input type="checkbox" id="terms-and-conditions" name="terms" required />
+                        {t('signup.terms-and-conditions')}
                     </label>
                     <label htmlFor="terms-and-conditions">
-                        <input type="checkbox" id="terns-and-conditions" name="terms" />
-                        {t('newsletter')}
+                        <input type="checkbox" id="terms-and-conditions" name="terms" />
+                        {t('signup.newsletter')}
                     </label>
                 </div>
 
                 <div>
-                    <p className="subtitle">{t('account')} <Link to="/auth" className="lien">{t('login')}</Link></p>
+                    <p className="subtitle">{t('signup.account')} <Link to="/auth" className="lien">{t('login')}</Link></p>
                 </div>
 
                 <p className="btn_actions">
-                    <button type="submit" className="button">{t('signUp')}</button>
-                    <button type="reset" className="button_outline">{t('reset')}</button>
+                    <button type="submit" className="button">{t('auth.signUp')}</button>
+                    <button type="reset" className="button_outline">{t('modal.reset')}</button>
                 </p>
             </form>
         </div >

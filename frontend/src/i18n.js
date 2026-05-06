@@ -16,7 +16,7 @@ i18n
         debug: true,
         supportedLngs: ['fr', 'en'],
         load: 'languageOnly',
-        ns: ['messages', 'auth', 'songs', 'tickets', 'errors', 'signup', 'user-infos', 'signin', 'modal'],
+        //ns: ['translation'],
         interpolation: {
             escapeValue: false,
         },
