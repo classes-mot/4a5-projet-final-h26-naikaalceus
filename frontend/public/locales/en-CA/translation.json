@@ -53,5 +53,6 @@
     "date4": "June 10 2027",
     "date5": "June 11 2027",
     "title-error": "Title required!",
-    "artist-error": "Artist required!"
+    "artist-error": "Artist required!",
+    "modal-title": "Confirm deletion"
 }

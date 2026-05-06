@@ -53,5 +53,6 @@
     "date4": "10 juin 2027",
     "date5": "11 juin 2027",
     "title-error": "Le titre est requis !",
-    "artist-error": "L'artiste est requis !"
+    "artist-error": "L'artiste est requis !",
+     "modal-title": "Confirmer la suppression"
 }

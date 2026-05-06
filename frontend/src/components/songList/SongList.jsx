@@ -4,10 +4,11 @@ import Modal from "../modal/Modal";
 import { useState, useEffect, useContext } from "react";
 import "./SongList.css";
 import SongCard from "../songCard/SongCard"
+import { useTranslation } from "react-i18next";
 
 
 const SongList = (props) => {
-
+    const { t } = useTranslation();
     const [songs, setSongs] = useState(() => {
         const storedSongs = localStorage.getItem("songs");
         return (storedSongs && JSON.parse(storedSongs).length > 0)
@@ -46,30 +47,30 @@ const SongList = (props) => {
     return (
         <div className="list_container">
             {showModal && (
-                <Modal titre="Confirmer la suppression" onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
-                    <p>Êtes-vous sûr de vouloir supprimer cette chanson ? Vous ne pourrez plus l'écouter :(</p>
+                <Modal titre={t('modal-title')} onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
+                    <p>{t('song-delete-message')}</p>
                 </Modal>
             )}
 
             <div className="list-header">
                 <input
                     type="text"
-                    placeholder="Rechercher une chanson. . ."
+                    placeholder={t('searchbar_song')}
                     className="search-bar"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
 
-                {auth.loggedIn && (<Link to="/newSong" className="button">Ajouter une chanson</Link>)}
+                {auth.loggedIn && (<Link to="/newSong" className="button">{t('addSong')}</Link>)}
 
             </div>
 
             {filterSongs.length === 0 ? (
                 <div className="list-center">
-                    <p>Aucune chanson trouvée</p>
+                    <p>{t('noFoundSong')}</p>
                 </div>
             ) : (
-                <ul className="games_list">
+                <ul className="songs_list">
                     {filterSongs.map((song) => (
                         <SongCard
                             key={song.id}
