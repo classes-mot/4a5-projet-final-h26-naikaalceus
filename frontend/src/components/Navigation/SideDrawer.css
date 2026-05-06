@@ -9,6 +9,6 @@ aside {
     z-index: 100;
     height: 100vh;
     width: 35%;
-    background: url("../images/OIP-2660696639.jpg");
+    background: #e9c5f3;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
