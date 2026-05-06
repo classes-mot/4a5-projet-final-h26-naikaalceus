@@ -12,7 +12,7 @@ import UpdateTicket from "../Containers/UpdateTicket";
 import SongCards from "../Containers/SongCards";
 import TicketCards from "../Containers/TicketCards";
 import Acceuil from "../Containers/Acceuil";
-import LanguageSwitcher from "./languageSwitcher";
+import LanguageSwitcher from "./languageSwitcher/LanguageSwitcher";
 
 const App = () => {
 
