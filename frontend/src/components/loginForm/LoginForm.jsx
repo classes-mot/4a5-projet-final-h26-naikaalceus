@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 export default function LoginForm() {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const [mdpVide, setMdpVide] = useState(false);
     const [emailVide, setEmailVide] = useState(false);
@@ -56,7 +56,7 @@ export default function LoginForm() {
                             className={emailVide ? "input_invalide" : ""}
                             required
                         />
-                        {emailVide && <div className="msg_erreur">Le courriel est requis</div>}
+                        {emailVide && <div className="msg_erreur">{t('email-error')}</div>}
                     </div>
 
                     <div className="control">
@@ -68,20 +68,20 @@ export default function LoginForm() {
                             className={mdpVide ? "input_invalide" : ""}
                             required
                         />
-                        {mdpVide && <div className="msg_erreur">Le mot de passe est requis</div>}
+                        {mdpVide && <div className="msg_erreur">{t('passwd-error1')}</div>}
                     </div>
                 </div>
 
                 <hr className="hr_control" />
 
                 <div>
-                    <p>Vous n'avez pas de compte ? <Link to="/subscribe" className="lien">S'inscrire</Link></p>
+                    <p>{t('noAccount')}<Link to="/subscribe" className="lien">{t('signUp')}</Link></p>
                 </div>
 
                 <div className="btn_actions">
                     <p>
-                        <button type="submit" className="button">Se connecter</button>
-                        <button type="reset" className="button_outline">Réinitialiser</button>
+                        <button type="submit" className="button">{t('login')}</button>
+                        <button type="reset" className="button_outline">{t('reset')}</button>
                     </p>
                 </div>
             </form>
