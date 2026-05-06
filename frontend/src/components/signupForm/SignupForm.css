@@ -1,12 +1,13 @@
 .container {
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
 }
 
 .form {
-    background: #ead1f1;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 25px;
     box-shadow: 0 40x 15px #ae9db3;
@@ -15,13 +16,13 @@
 }
 
 .title {
-    color: #ffffff;
+    color: #dea8ee;
     text-align: center;
     margin-bottom: 0.5rem;
 }
 
 .subtitle {
-    color: #ffffff;
+    color: #dea8ee;
     text-align: center;
     font-size: 0.9rem;
     margin-bottom: 2rem;
@@ -42,7 +43,7 @@
 
 .control label {
     font-weight: bold;
-    color: #ffffff;
+    color: #dea8ee;
     margin-bottom: 0.3rem;
     font-size: 0.90rem;
 }
@@ -56,8 +57,9 @@
 }
 
 .control input:focus {
-    border-color: #371042;
+    border-color: #e4b8f1;
     background-color: #edc1fa;
+    opacity: 0.85;
 }
 
 .input_invalide {
@@ -74,19 +76,19 @@
 }
 
 .lien {
-    color: #dea8ee;
+    color: #af80bd;
     text-decoration: none;
 }
 
 .lien:hover {
-    color: #e9b1fa;
+    color: #9362a1;
     text-decoration: underline;
 }
 
 .btn_actions {
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 5px;
     margin-top: 1.5rem;
 }
 
