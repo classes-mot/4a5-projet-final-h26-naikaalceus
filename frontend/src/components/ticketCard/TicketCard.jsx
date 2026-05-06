@@ -19,9 +19,9 @@ const TicketCard = (props) => {
 
                 {auth.loggedIn && <div>
                     <Link to={`/edit/${props.id}`}>
-                        <button>{t('edit')}</button>
+                        <button>{t('modal.edit')}</button>
                     </Link>
-                    <button onClick={() => props.OnDelete(props.id)}>{TicketCard('delete')}</button>
+                    <button onClick={() => props.OnDelete(props.id)}>{TicketCard('modal.delete')}</button>
                 </div>
                 }
             </Card>
