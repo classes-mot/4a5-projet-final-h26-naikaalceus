@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 export default function LoginForm() {
 
-    const { t } = useTranslation(['messages', 'auth', 'songs', 'tickets', 'errors', 'signup', 'user-infos', 'signin', 'modal']);
+    const { t } = useTranslation();
 
     const [mdpVide, setMdpVide] = useState(false);
     const [emailVide, setEmailVide] = useState(false);
@@ -42,13 +42,13 @@ export default function LoginForm() {
     return (
         <div className="container">
             <form onSubmit={authSubmitHandler} className="form">
-                <h2 className="title">{t('login', { ns: 'auth' })}</h2>
+                <h2 className="title">{t(auth.login)}</h2>
 
                 <hr className="hr_control" />
 
                 <div className="control-row">
                     <div className="control">
-                        <label htmlFor="email">{t('email', { ns: 'user-infos' })}</label>
+                        <label htmlFor="email">{t('user-infos.email')}</label>
                         <input
                             id="email"
                             type="email"
@@ -56,11 +56,11 @@ export default function LoginForm() {
                             className={emailVide ? "input_invalide" : ""}
                             required
                         />
-                        {emailVide && <div className="msg_erreur">{t('email-error', { ns: 'errors' })}</div>}
+                        {emailVide && <div className="msg_erreur">{t('errors.email-error')}</div>}
                     </div>
 
                     <div className="control">
-                        <label htmlFor="password">{t('password')}</label>
+                        <label htmlFor="password">{t('user-infos.password')}</label>
                         <input
                             id="password"
                             type="password"
@@ -68,20 +68,20 @@ export default function LoginForm() {
                             className={mdpVide ? "input_invalide" : ""}
                             required
                         />
-                        {mdpVide && <div className="msg_erreur">{t('passwd-error1', { ns: 'errors' })}</div>}
+                        {mdpVide && <div className="msg_erreur">{t('errors.passwd-error1')}</div>}
                     </div>
                 </div>
 
                 <hr className="hr_control" />
 
                 <div>
-                    <p>{t('noAccount')}<Link to="/subscribe" className="lien">{t('signUp', { ns: 'auth' })}</Link></p>
+                    <p>{t('noAccount')}<Link to="/subscribe" className="lien">{t('auth.signUp')}</Link></p>
                 </div>
 
                 <div className="btn_actions">
                     <p>
-                        <button type="submit" className="button">{t('login', { ns: 'auth' })}</button>
-                        <button type="reset" className="button_outline">{t('reset', { ns: 'modal' })}</button>
+                        <button type="submit" className="button">{t(auth.login)}</button>
+                        <button type="reset" className="button_outline">{t('modal.reset')}</button>
                     </p>
                 </div>
             </form>
