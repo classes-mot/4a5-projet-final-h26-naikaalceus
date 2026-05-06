@@ -12,7 +12,7 @@ const TicketCard = (props) => {
         <li>
             <Card>
 
-                <div>
+                <div class>
                     <h2> {props.artist} - {props.date} - {props.location} </h2>
                     <p>{props.forfait}</p>
                 </div>

@@ -41,7 +41,8 @@
         "date5": "11 juin 2027",
         "package": "Forfait",
         "basicPackage": "De base",
-        "tickets": "Tickets"
+        "tickets": "Tickets",
+        "noFoundTickets": "Aucun ticket trouvé"
     },
     "errors": {
         "passwd-error": "Les mots de passe devraient être pareils !",

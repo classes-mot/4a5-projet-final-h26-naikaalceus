@@ -41,7 +41,8 @@
         "date5": "June 11 2027",
         "package": "Package",
         "basicPackage": "Basic",
-        "tickets": "Tickets"
+        "tickets": "Tickets",
+         "noFoundTickets": "No ticket found"
     },
     "errors": {
         "title-error": "Title required!",

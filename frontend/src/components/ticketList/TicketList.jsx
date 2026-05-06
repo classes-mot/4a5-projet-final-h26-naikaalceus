@@ -2,13 +2,18 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/auth-context";
 import Modal from "../modal/Modal";
 import { useState, useEffect, useContext } from "react";
+import TicketCard from "../ticketCard/TicketCard"
 import { useTranslation } from "react-i18next";
+
 
 const TicketList = (props) => {
     const { t } = useTranslation;
     const [tickets, setTickets] = useState(() => {
         const storedTickets = localStorage.getItem("tickets");
-        return (storedTickets && JSON.parse(storedTickets).length > 0) ? JSON.parse(storedTickets) : props.items;
+        if (storedTickets && JSON.parse(storedTickets).length > 0) {
+            return JSON.parse(storedTickets)
+        }
+        return props.items || [];
     });
 
     const [showModal, setShowModal] = useState(false);
@@ -21,6 +26,11 @@ const TicketList = (props) => {
 
     }, [tickets]);
 
+const startDeleteHandler = (id) => {
+        setIdToDelete(id);
+        setShowModal(true);
+    }
+
     const cancelDeleteHandler = () => {
         setIdToDelete(null);
         setShowModal(false);
@@ -30,6 +40,7 @@ const TicketList = (props) => {
         setTickets(prevTickets => prevTickets.filter(ticket => ticket.id !== idToDelete));
         cancelDeleteHandler();
     }
+    const stored_Tickets = localStorage.getItem("tickets");
 
     return (
         <div className="list-container">
@@ -41,6 +52,25 @@ const TicketList = (props) => {
             <div>
                 {auth.loggedIn && (<Link to="/newTicket" className="button">{t('tickets.addTicket')}</Link>)}
             </div>
+
+            {JSON.parse(stored_Tickets).length === 0 ? (
+                <div className="list-center">
+                    <p>{t('tickets.noFoundTicket')}</p>
+                </div>
+            ) : (
+                <ul className="ticket_list">
+                    {stored_Tickets.map((ticket) => (
+                        <TicketCard
+                            key={ticket.id}
+                            id={ticket.id}
+                            artist={ticket.artist}
+                            date={ticket.date}
+                            location={ticket.location}
+                            OnDelete={startDeleteHandler}
+                        />
+                    ))}
+                </ul>
+            )}
         </div>
     );
 
