@@ -48,7 +48,7 @@ const SongList = (props) => {
         <div className="list_container">
             {showModal && (
                 <Modal titre={t('modal.modal-title')} onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
-                    <p>{t('message.song-delete-message')}</p>
+                    <p>{t('messages.song-delete-message')}</p>
                 </Modal>
             )}
 

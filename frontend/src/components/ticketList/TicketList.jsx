@@ -34,12 +34,12 @@ const TicketList = (props) => {
     return (
         <div className="list-container">
             {showModal && (
-                <Modal titre={t('modal-title')} onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
-                    <p>{t('ticket-delete-message')}</p>
+                <Modal titre={t('modal.modal-title')} onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
+                    <p>{t('messages.ticket-delete-message')}</p>
                 </Modal>
             )}
             <div>
-                {auth.loggedIn && (<Link to="/newTicket" className="button">{t('addTicket')}</Link>)}
+                {auth.loggedIn && (<Link to="/newTicket" className="button">{t('tickets.addTicket')}</Link>)}
             </div>
         </div>
     );
