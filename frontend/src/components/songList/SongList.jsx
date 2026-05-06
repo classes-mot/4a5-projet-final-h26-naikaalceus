@@ -52,7 +52,7 @@ const SongList = (props) => {
                 </Modal>
             )}
 
-            <div className="list-header">
+            <div className="list_header">
                 <input
                     type="text"
                     placeholder={t('songs.searchbar_song')}
