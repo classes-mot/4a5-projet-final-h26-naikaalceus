@@ -1,7 +1,9 @@
 import { createPortal } from "react-dom";
 import Card from "../UIElements/Card";
+import { useTranslation } from "react-i18next"
 
 const Modal = (props) => {
+    const { t } = useTranslation();
     const content = (
         <div className="modal">
             <Card className="modal_container" onClick={(event) => event.stopPropagation()}>
@@ -12,8 +14,8 @@ const Modal = (props) => {
                     {props.children}
                 </div>
                 <footer modal_footer>
-                    <button className="btn_cancel" onClick={props.onCancel}>Annuler</button>
-                    <button className="btn_confirm" onClick={props.onConfirm}>Confirmer</button>
+                    <button className="btn_cancel" onClick={props.onCancel}>{t('cancel-button')}</button>
+                    <button className="btn_confirm" onClick={props.onConfirm}>{t('confirm-button')}</button>
                 </footer>
             </Card>
         </div>
