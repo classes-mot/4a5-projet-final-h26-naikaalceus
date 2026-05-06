@@ -3,8 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginForm.css";
+import { useTranslation } from "react-i18next";
 
 export default function LoginForm() {
+
+    const { t, i18n } = useTranslation();
 
     const [mdpVide, setMdpVide] = useState(false);
     const [emailVide, setEmailVide] = useState(false);
@@ -39,18 +42,19 @@ export default function LoginForm() {
     return (
         <div className="container">
             <form onSubmit={authSubmitHandler} className="form">
-                <h2 className="title">Connexion</h2>
+                <h2 className="title">{t('login')}</h2>
 
                 <hr className="hr_control" />
 
                 <div className="control-row">
                     <div className="control">
-                        <label htmlFor="email">Courriel</label>
+                        <label htmlFor="email">{t('email')}</label>
                         <input
                             id="email"
                             type="email"
                             name="courriel"
                             className={emailVide ? "input_invalide" : ""}
+                            required
                         />
                         {emailVide && <div className="msg_erreur">Le courriel est requis</div>}
                     </div>
