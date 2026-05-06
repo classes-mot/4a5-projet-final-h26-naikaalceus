@@ -24,9 +24,9 @@ const SongCard = (props) => {
 
                 {auth.loggedIn && <div className="SongCard_actions">
                     <Link to={`/edit/${props.id}`}>
-                        <button className="btn_outline">{t('edit')}</button>
+                        <button className="btn_outline">{t('modal.edit')}</button>
                     </Link>
-                    <button className="button" onClick={() => props.OnDelete(props.id)}>{t('delete')}</button>
+                    <button className="button" onClick={() => props.OnDelete(props.id)}>{t('modal.delete')}</button>
                 </div>
                 }
             </Card>
