@@ -3,8 +3,12 @@ import { AuthContext } from "../../context/auth-context";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./SongCard.css";
+import { useTranslation } from "react-i18next";
 
 const SongCard = (props) => {
+
+    const { t } = useTranslation();
+
     const auth = useContext(AuthContext)
 
     return (
@@ -20,9 +24,9 @@ const SongCard = (props) => {
 
                 {auth.loggedIn && <div className="SongCard_actions">
                     <Link to={`/edit/${props.id}`}>
-                        <button className="btn_outline">Modifier</button>
+                        <button className="btn_outline">{t('edit')}</button>
                     </Link>
-                    <button className="button" onClick={() => props.OnDelete(props.id)}>Supprimer</button>
+                    <button className="button" onClick={() => props.OnDelete(props.id)}>{t('delete')}</button>
                 </div>
                 }
             </Card>
