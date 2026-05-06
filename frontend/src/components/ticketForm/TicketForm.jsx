@@ -24,9 +24,9 @@ const TicketForm = () => {
 
     useEffect(() => {
         if (ticketId) {
-            document.title = t('edit');
+            document.title = t('modal.edit');
         } else {
-            document.title = t('addTicket');
+            document.title = t('tickets.addTicket');
         }
     }, [ticketId, t]);
 
@@ -38,7 +38,7 @@ const TicketForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        let storedTickets = JSON.parse(localStorage.getItem("Tickets")) || [];
+        let storedTickets = JSON.parse(localStorage.getItem("tickets")) || [];
         if (ticketId) {
             storedTickets = storedTickets.map((ticket) => (ticket.id === ticketId ? { ...formData } : ticket));
         } else {
@@ -51,10 +51,10 @@ const TicketForm = () => {
     return (
         <div className="form">
             <Card className="form_card">
-                <h2 className="title">{ticketId ? t('editTicket') : t('addTicket')}</h2>
+                <h2 className="title">{ticketId ? t('tickets.editTicket') : t('tickets.addTicket')}</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="control">
-                        <label>{t('artist')}</label>
+                        <label>{t('songs.artist')}</label>
                         <select name="artist" value={formData.artist} onChange={handleChange}>
                             <option value="Beyoncé">Beyoncé</option>
                             <option value="Kittie">Kittie</option>
@@ -68,33 +68,33 @@ const TicketForm = () => {
                     <div className="control">
                         <label>Location</label>
                         <select name="location" value={formData.location} onChange={handleChange}>
-                            <option value="Montreal">{t('location1')}</option>
-                            <option value="Toronto">{t('location2')}</option>
-                            <option value="Vancouver">{t('location3')}</option>
-                            <option value="Chicago">{t('location4')}</option>
-                            <option value="NewYork">{t('location5')}</option>
-                            <option value="LA">{t('location6')}</option>
+                            <option value="Montreal">{t('tickets.location1')}</option>
+                            <option value="Toronto">{t('tickets.location2')}</option>
+                            <option value="Vancouver">{t('tickets.location3')}</option>
+                            <option value="Chicago">{t('tickets.location4')}</option>
+                            <option value="NewYork">{t('tickets.location5')}</option>
+                            <option value="LA">{t('tickets.location6')}</option>
                         </select>
                     </div>
 
                     <div className="control">
                         <label>Date</label>
                         <select name="date" value={formData.data} onChange={handleChange}>
-                            <option value="160427">{t('date1')}</option>
-                            <option value="060527">{t('date2')}</option>
-                            <option value="080527">{t('date3')}</option>
-                            <option value="100727">{t('date4')}</option>
-                            <option value="110727">{t('date5')}</option>
+                            <option value="160427">{t('tickets.date1')}</option>
+                            <option value="060527">{t('tickets.date2')}</option>
+                            <option value="080527">{t('tickets.date3')}</option>
+                            <option value="100727">{t('tickets.date4')}</option>
+                            <option value="110727">{t('tickets.date5')}</option>
 
                         </select>
                     </div>
 
                     <div className="control">
-                        <label>{t('package')}</label>
+                        <label>{t('tickets.package')}</label>
                         <ul>
                             <li>
                                 <input type="radio" id="forfait-base" name="forfait" value="deBase" />
-                                <label for="forfait-base">{t('basicPackage')}</label>
+                                <label for="forfait-base">{t('tickets.basicPackage')}</label>
                             </li>
                             <li>
                                 <input type="radio" id="forfait-vip" name="forfait" value="vip" />
@@ -103,8 +103,8 @@ const TicketForm = () => {
                         </ul>
                     </div>
                     <div className="btn_actions">
-                        <button type="onSubmit" className="button_enregistrer">{t('save')}</button>
-                        <button className="button_annuler" type="onCancel" onClick={() => navigate("/")}>{t('cancel-button')}</button>
+                        <button type="onSubmit" className="button_enregistrer">{t('modal.save')}</button>
+                        <button className="button_annuler" type="onCancel" onClick={() => navigate("/")}>{t('modal.cancel-button')}</button>
                     </div>
 
                 </form>
