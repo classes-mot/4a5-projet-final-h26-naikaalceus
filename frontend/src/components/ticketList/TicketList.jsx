@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/auth-context";
 import Modal from "../modal/Modal";
 import { useState, useEffect, useContext } from "react";
+import { useTranslation } from "react-i18next";
 
 const TicketList = (props) => {
-
+    const { t } = useTranslation;
     const [tickets, setTickets] = useState(() => {
         const storedTickets = localStorage.getItem("tickets");
         return (storedTickets && JSON.parse(storedTickets).length > 0) ? JSON.parse(storedTickets) : props.items;
@@ -33,12 +34,12 @@ const TicketList = (props) => {
     return (
         <div className="list-container">
             {showModal && (
-                <Modal titre="Confirmer la suppression" onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
-                    <p>Êtes-vous sûr de vouloir supprimer ce ticket ?</p>
+                <Modal titre={t('modal-title')} onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
+                    <p>{t('ticket-delete-message')}</p>
                 </Modal>
             )}
             <div>
-                {auth.loggedIn && (<Link to="/newTicket" className="button">Ajouter un ticket</Link>)}
+                {auth.loggedIn && (<Link to="/newTicket" className="button">{t('addTicket')}</Link>)}
             </div>
         </div>
     );
