@@ -34,7 +34,7 @@ const Menu = () => {
                     <div>
                         <p className="btn-actions">
                             <Link to="/songs" className="button">{t('songs.viewSongs')}</Link>
-                            <Link to="/tickets" className="button">{t('songs.viewTickets')}</Link>
+                            <Link to="/tickets" className="button">{t('tickets.viewTickets')}</Link>
                         </p>
                     </div>
                 </div>

@@ -17,16 +17,16 @@ const NavLinks = () => {
             {auth.loggedIn && (
                 <>
                     <li>
-                        <NavLink to="/newSong">{t('addSong')}</NavLink>
+                        <NavLink to="/newSong">{t('songs.addSong')}</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/newTicket">{t("addTicket")}</NavLink>
+                        <NavLink to="/newTicket">{t("tickets.addTicket")}</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/songs">{t('songs')}</NavLink>
+                        <NavLink to="/songs">{t('songs.songs')}</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/tickets">{t('tickets')}</NavLink>
+                        <NavLink to="/tickets">{t('tickets.tickets')}</NavLink>
                     </li>
                 </>
             )}
@@ -34,16 +34,16 @@ const NavLinks = () => {
             {!auth.loggedIn ? (
                 <>
                     <li>
-                        <NavLink to="/auth">{t('login')}</NavLink>
+                        <NavLink to="/auth">{t('auth.login')}</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/subscribe">{t('signUp')}</NavLink>
+                        <NavLink to="/subscribe">{t('auth.signUp')}</NavLink>
                     </li>
 
                 </>
             ) : (
                 <li>
-                    <NavLink to="/" onClick={auth.logout}>{t('logout')}</NavLink>
+                    <NavLink to="/" onClick={auth.logout}>{t('auth.logout')}</NavLink>
                 </li>
             )}
         </ul>

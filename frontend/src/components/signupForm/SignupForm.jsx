@@ -87,7 +87,7 @@ export default function Signup() {
                 </div>
 
                 <div>
-                    <p className="subtitle">{t('signup.account')} <Link to="/auth" className="lien">{t('login')}</Link></p>
+                    <p className="subtitle">{t('signup.account')} <Link to="/auth" className="lien">{t('auth.login')}</Link></p>
                 </div>
 
                 <p className="btn_actions">
