@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 
 const TicketList = (props) => {
-    const { t } = useTranslation;
+    const { t } = useTranslation();
     const [tickets, setTickets] = useState(() => {
         const storedTickets = localStorage.getItem("tickets");
         if (storedTickets && JSON.parse(storedTickets).length > 0) {
@@ -22,11 +22,11 @@ const TicketList = (props) => {
 
     useEffect(() => {
 
-        localStorage.setItem(tickets, JSON.stringify("tickets"));
+        localStorage.setItem("tickets", JSON.stringify(tickets));
 
     }, [tickets]);
 
-const startDeleteHandler = (id) => {
+    const startDeleteHandler = (id) => {
         setIdToDelete(id);
         setShowModal(true);
     }
@@ -40,7 +40,6 @@ const startDeleteHandler = (id) => {
         setTickets(prevTickets => prevTickets.filter(ticket => ticket.id !== idToDelete));
         cancelDeleteHandler();
     }
-    const stored_Tickets = localStorage.getItem("tickets");
 
     return (
         <div className="list-container">
@@ -53,19 +52,20 @@ const startDeleteHandler = (id) => {
                 {auth.loggedIn && (<Link to="/newTicket" className="button">{t('tickets.addTicket')}</Link>)}
             </div>
 
-            {JSON.parse(stored_Tickets).length === 0 ? (
+            {tickets.length === 0 ? (
                 <div className="list-center">
                     <p>{t('tickets.noFoundTicket')}</p>
                 </div>
             ) : (
                 <ul className="ticket_list">
-                    {stored_Tickets.map((ticket) => (
+                    {tickets.map((ticket) => (
                         <TicketCard
                             key={ticket.id}
                             id={ticket.id}
                             artist={ticket.artist}
                             date={ticket.date}
                             location={ticket.location}
+                            forfait={ticket.forfait}
                             OnDelete={startDeleteHandler}
                         />
                     ))}

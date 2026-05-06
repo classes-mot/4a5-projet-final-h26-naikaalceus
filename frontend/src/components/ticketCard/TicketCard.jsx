@@ -5,23 +5,23 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const TicketCard = (props) => {
-    const { t } = useTranslation;
+    const { t } = useTranslation();
     const auth = useContext(AuthContext);
 
     return (
-        <li>
-            <Card>
+        <li className="TicketCard">
+            <Card className="TicketCard_content">
 
-                <div class>
+                <div className="TicketCard_info">
                     <h2> {props.artist} - {props.date} - {props.location} </h2>
                     <p>{props.forfait}</p>
                 </div>
 
-                {auth.loggedIn && <div>
+                {auth.loggedIn && <div className="TicketCard_actions">
                     <Link to={`/edit/${props.id}`}>
-                        <button>{t('modal.edit')}</button>
+                        <button className="button_outline">{t('modal.edit')}</button>
                     </Link>
-                    <button onClick={() => props.OnDelete(props.id)}>{TicketCard('modal.delete')}</button>
+                    <button className="button" onClick={() => props.OnDelete(props.id)}>{t('modal.delete')}</button>
                 </div>
                 }
             </Card>
