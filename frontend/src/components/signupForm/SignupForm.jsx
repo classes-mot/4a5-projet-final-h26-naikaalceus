@@ -78,7 +78,7 @@ export default function Signup() {
                     </label>
                     <label htmlFor="terms-and-conditions">
                         <input type="checkbox" id="terns-and-conditions" name="terms" />
-                        Je souhaite m"inscrire à l'infolettres de ce site web
+                        Je souhaite m'inscrire à l'infolettres de ce site web
                     </label>
                 </div>
 
