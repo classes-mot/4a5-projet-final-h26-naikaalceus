@@ -26,9 +26,9 @@ const SongForm = () => {
 
     useEffect(() => {
         if (songId) {
-            document.title = `t('edit) : ${formData.title}`;
+            document.title = `t('modal.edit) : ${formData.title}`;
         } else {
-            document.title = "t('addSong)";
+            document.title = "t('songs.addSong)";
         }
     }, [songId, formData.title]);
 
@@ -40,8 +40,8 @@ const SongForm = () => {
 
     const validate = () => {
         let errs = {};
-        if (!formData.title.trim()) errs.title = t('artist-error');
-        if (!formData.artist.trim()) errs.artist = t('title-error');
+        if (!formData.title.trim()) errs.title = t('errors.artist-error');
+        if (!formData.artist.trim()) errs.artist = t('errors.title-error');
         setErrors(errs);
         return Object.keys(errs).length === 0;
     };
@@ -63,10 +63,10 @@ const SongForm = () => {
     return (
         <div className="form">
             <Card className="form_card">
-                <h2 className="title">{songId ? t('editSong') : t('addSong')}</h2>
+                <h2 className="title">{songId ? t('songs.editSong') : t('songs.addSong')}</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="control">
-                        <label>{t('title')}</label>
+                        <label>{t('songs.title')}</label>
                         <input
                             type="text"
                             name="title"
@@ -77,7 +77,7 @@ const SongForm = () => {
                     </div>
 
                     <div className="control">
-                        <label>{t('title')}</label>
+                        <label>{t('songs.title')}</label>
                         <input
                             type="text"
                             name="artist"
@@ -97,7 +97,7 @@ const SongForm = () => {
                     </div>
 
                     <div className="control">
-                        <label>{t('releaseYear')}</label>
+                        <label>{t('songs.releaseYear')}</label>
                         <input
                             type="text"
                             name="releaseYear"
@@ -108,8 +108,8 @@ const SongForm = () => {
                     </div>
 
                     <div className="btn_actions">
-                        <button type="onSubmit" className="button_enregistrer">{t('save')}</button>
-                        <button type="onCancel" className="button_annuler" onClick={() => navigate("/")}>{t('cancel-button')}</button>
+                        <button type="onSubmit" className="button_enregistrer">{t('modal.save')}</button>
+                        <button type="onCancel" className="button_annuler" onClick={() => navigate("/")}>{t('modal.cancel-button')}</button>
                     </div>
 
                 </form>
