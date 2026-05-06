@@ -16,15 +16,15 @@ const SongCard = (props) => {
             <Card className="SongCard_content">
 
                 <div className="SongCard_info">
-                    <h2>{props.title} - {props.artist} </h2>
+                    <h2>{props.titre} - {props.artiste} </h2>
                     <p>{props.album}</p>
-                    <p>{props.releaseYear}</p>
+                    <p>{props.anneePublication}</p>
 
                 </div>
 
                 {auth.loggedIn && <div className="SongCard_actions">
                     <Link to={`/edit/${props.id}`}>
-                        <button className="btn_outline">{t('modal.edit')}</button>
+                        <button className="button_outline">{t('modal.edit')}</button>
                     </Link>
                     <button className="button" onClick={() => props.OnDelete(props.id)}>{t('modal.delete')}</button>
                 </div>

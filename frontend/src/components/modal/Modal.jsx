@@ -14,8 +14,8 @@ const Modal = (props) => {
                     {props.children}
                 </div>
                 <footer modal_footer>
-                    <button className="btn_cancel" onClick={props.onCancel}>{t('cancel-button')}</button>
-                    <button className="btn_confirm" onClick={props.onConfirm}>{t('confirm-button')}</button>
+                    <button className="btn_cancel" onClick={props.onCancel}>{t('modal.cancel-button')}</button>
+                    <button className="btn_confirm" onClick={props.onConfirm}>{t('modal.confirm-button')}</button>
                 </footer>
             </Card>
         </div>
