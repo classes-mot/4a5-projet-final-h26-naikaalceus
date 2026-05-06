@@ -32,7 +32,7 @@ export default function Signup() {
     return (
         <div className="container">
             <form className="form" onSubmit={handleSubmit}>
-                <h2 className="title">Bienvenue !</h2>
+                <h2 className="title">{t('welcomeMessage')}</h2>
                 <p className="subtitle">{t('info')}</p>
 
                 <div className="control">
