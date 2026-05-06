@@ -1,6 +1,7 @@
 {
     "welcome_NotLoggedIn": "Welcome everyone!",
     "welcome_LoggedIn": "Welcome back!",
+    "welcomeMessage": "Welcome!",
     "menuMessage_NotLoggedIn": "By signing up, you gain access to a completly personnalized music library. And even better, you also gain access to tickets sales for your favourites artists!",
     "menuMessage_LoggedIn": "What would you like to do?",
     "signUp": "Sign up",
@@ -29,6 +30,8 @@
     "confirm-button": "Confirm",
     "cancel-button": "Cancel",
     "edit": "Edit",
+    "editSong": "Edit song",
+    "editTicket": "Edit ticket",
     "delete": "Delte",
     "save": "Save",
     "ticket-delete-message": "Are you sure you want to delete this ticket?",

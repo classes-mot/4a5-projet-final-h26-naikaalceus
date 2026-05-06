@@ -1,6 +1,7 @@
 {
     "welcome_NotLoggedIn": "Bienvenue à toutes et è tous !",
     "welcome_LoggedIn": "Bon retour !",
+    "welcomeMessage": "Bienvenue !",
     "menuMessage_NotLoggedIn": "En vous inscrivant, vous gagnez accès à une bibliothèque de musique complètement personnalisée. Et encore mieux, vous gagnez aussi accès aux ventes de tickets de vos artistes préférés ! ",
     "menuMessage_LoggedIn": "Que souhaitez-vous faire ?",
     "signUp": "S'inscrire",
@@ -29,6 +30,8 @@
     "confirm-button": "Confirmer",
     "cancel-button": "Annuler",
     "edit": "Modifier",
+    "editSong": "Modfier la chanson",
+    "editTicket": "Modfier le ticket",
     "delete": "Supprimer",
     "save": "Enregistrer",
     "ticket-delete-message": "Êtes-vous sûr.e de vouloir supprimer ce ticket ?",
