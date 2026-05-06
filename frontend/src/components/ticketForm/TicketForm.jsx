@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Card from "../UIElements/Card";
 import "./TicketForm.css";
+import { useTranslation } from "react-i18next";
 
 const TicketForm = () => {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const { ticketId } = useParams();
 
@@ -22,11 +24,11 @@ const TicketForm = () => {
 
     useEffect(() => {
         if (ticketId) {
-            document.title = `Modification : ${formData.title}`;
+            document.title = t('edit');
         } else {
-            document.title = "Ajouter un nouveau ticket";
+            document.title = t('addTicket');
         }
-    }, [ticketId, formData.title]);
+    }, [ticketId, t]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -49,10 +51,10 @@ const TicketForm = () => {
     return (
         <div className="form">
             <Card className="form_card">
-                <h2 className="title">{ticketId ? "Modifier le ticket" : "Ajouter un ticket"}</h2>
+                <h2 className="title">{ticketId ? t('editTicket') : t('addTicket')}</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="control">
-                        <label>Artiste</label>
+                        <label>{t('artist')}</label>
                         <select name="artist" value={formData.artist} onChange={handleChange}>
                             <option value="Beyoncé">Beyoncé</option>
                             <option value="Kittie">Kittie</option>
@@ -66,33 +68,33 @@ const TicketForm = () => {
                     <div className="control">
                         <label>Location</label>
                         <select name="location" value={formData.location} onChange={handleChange}>
-                            <option value="Montreal">Montréal, CA</option>
-                            <option value="Toronto">Toronto, CA</option>
-                            <option value="Vancouver">Vancouver, CA</option>
-                            <option value="Chicago">Chicago, ÉUA</option>
-                            <option value="NewYork">New York, ÉUA</option>
-                            <option value="LA">Los Angeles, ÉUA</option>
+                            <option value="Montreal">{t('location1')}</option>
+                            <option value="Toronto">{t('location2')}</option>
+                            <option value="Vancouver">{t('location3')}</option>
+                            <option value="Chicago">{t('location4')}</option>
+                            <option value="NewYork">{t('location5')}</option>
+                            <option value="LA">{t('location6')}</option>
                         </select>
                     </div>
 
                     <div className="control">
                         <label>Date</label>
                         <select name="date" value={formData.data} onChange={handleChange}>
-                            <option value="160427">16 avril 2027</option>
-                            <option value="060527">6 main 2027</option>
-                            <option value="080527">8 main 2027</option>
-                            <option value="100727">10 juin 2027</option>
-                            <option value="110727">11 juin 2027</option>
+                            <option value="160427">{t('date1')}</option>
+                            <option value="060527">{t('date2')}</option>
+                            <option value="080527">{t('date3')}</option>
+                            <option value="100727">{t('date4')}</option>
+                            <option value="110727">{t('date5')}</option>
 
                         </select>
                     </div>
 
                     <div className="control">
-                        <label>Forfait</label>
+                        <label>{t('package')}</label>
                         <ul>
                             <li>
                                 <input type="radio" id="forfait-base" name="forfait" value="deBase" />
-                                <label for="forfait-base">De base</label>
+                                <label for="forfait-base">{t('basicPackage')}</label>
                             </li>
                             <li>
                                 <input type="radio" id="forfait-vip" name="forfait" value="vip" />
@@ -101,8 +103,8 @@ const TicketForm = () => {
                         </ul>
                     </div>
                     <div className="btn_actions">
-                        <button type="onSubmit" className="button_enregistrer">Enregistrer</button>
-                        <button className="button_annuler" type="onCancel" onClick={() => navigate("/")}>Annuler</button>
+                        <button type="onSubmit" className="button_enregistrer">{t('save')}</button>
+                        <button className="button_annuler" type="onCancel" onClick={() => navigate("/")}>{t('cancel-button')}</button>
                     </div>
 
                 </form>
