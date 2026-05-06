@@ -60,7 +60,7 @@ export default function LoginForm() {
                     </div>
 
                     <div className="control">
-                        <label htmlFor="password">Mot de passe</label>
+                        <label htmlFor="password">{t('password')}</label>
                         <input
                             id="password"
                             type="password"
