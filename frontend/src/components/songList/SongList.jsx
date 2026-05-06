@@ -47,27 +47,27 @@ const SongList = (props) => {
     return (
         <div className="list_container">
             {showModal && (
-                <Modal titre={t('modal-title')} onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
-                    <p>{t('song-delete-message')}</p>
+                <Modal titre={t('modal.modal-title')} onCancel={cancelDeleteHandler} onConfirm={confirmDeleteHandler}>
+                    <p>{t('message.song-delete-message')}</p>
                 </Modal>
             )}
 
             <div className="list-header">
                 <input
                     type="text"
-                    placeholder={t('searchbar_song')}
+                    placeholder={t('songs.searchbar_song')}
                     className="search-bar"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
 
-                {auth.loggedIn && (<Link to="/newSong" className="button">{t('addSong')}</Link>)}
+                {auth.loggedIn && (<Link to="/newSong" className="button">{t('songs.addSong')}</Link>)}
 
             </div>
 
             {filterSongs.length === 0 ? (
                 <div className="list-center">
-                    <p>{t('noFoundSong')}</p>
+                    <p>{t('songs.noFoundSong')}</p>
                 </div>
             ) : (
                 <ul className="songs_list">
