@@ -3,8 +3,12 @@ import { AuthContext } from "../../context/auth-context";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./SignupForm.css";
+import { useTranslation } from "react-i18next";
 
 export default function Signup() {
+
+    const { t } = useTranslation();
+
     const [passwdNotEqual, setPsswdNotEqual] = useState(false);
     const auth = useContext(AuthContext)
     const navigate = useNavigate();
@@ -15,7 +19,7 @@ export default function Signup() {
         const data = Object.fromEntries(fd.entries());
 
         if (data.password !== data["confirmer-mdp"]) {
-            console.log("Les mots de passes sont différents")
+            console.log(t('passwd-error'))
             setPsswdNotEqual(true);
             return;
         }
@@ -29,20 +33,20 @@ export default function Signup() {
         <div className="container">
             <form className="form" onSubmit={handleSubmit}>
                 <h2 className="title">Bienvenue !</h2>
-                <p className="subtitle">Veuillez entrer vos informations. </p>
+                <p className="subtitle">{t('info')}</p>
 
                 <div className="control">
-                    <label htmlFor="email"> Courriel </label>
+                    <label htmlFor="email">{t('email')}</label>
                     <input id="email" type="email" name="courriel" required />
                 </div>
 
                 <div className="control-row">
                     <div className="control">
-                        <label htmlFor="password">Mot de passe</label>
+                        <label htmlFor="password">{t('password')}</label>
                         <input id="password" type="password" name="password" required />
                     </div>
                     <div className="control">
-                        <label htmlFor="confirmer-mdp">Confirmez le mot de passe</label>
+                        <label htmlFor="confirmer-mdp">{t('passwd-confirm')}</label>
                         <input
                             id="confirmer-mdp"
                             type="password"
@@ -55,18 +59,18 @@ export default function Signup() {
 
                 {passwdNotEqual && (
                     <div className="msg_erreur">
-                        <p>Les mots de passe doivent être pareils ! </p>
+                        <p>{t('passwd-error')} </p>
                     </div>
                 )}
                 <hr className="hr_control" />
                 <div className="control_row">
                     <div className="control">
-                        <label htmlFor="first-name">Prénom</label>
+                        <label htmlFor="first-name">{t('first-name')}</label>
                         <input id="first-name" type="text" name="first-name" required />
                     </div>
 
                     <div className="control">
-                        <label htmlFor="last-name">Nom</label>
+                        <label htmlFor="last-name">{t('last-name')}</label>
                         <input id="last-name" type="text" name="last-name" required />
                     </div>
                 </div>
@@ -74,21 +78,21 @@ export default function Signup() {
                 <div className="control checkbox">
                     <label htmlFor="terms-and-conditions">
                         <input type="checkbox" id="terns-and-conditions" name="terms" required />
-                        J'accepte les conditions générales de ce  site web
+                        {t('terms-and-conditions')}
                     </label>
                     <label htmlFor="terms-and-conditions">
                         <input type="checkbox" id="terns-and-conditions" name="terms" />
-                        Je souhaite m'inscrire à l'infolettres de ce site web
+                        {t('newsletter')}
                     </label>
                 </div>
 
                 <div>
-                    <p className="subtitle">Vous avez un compte ? <Link to="/auth" className="lien">Se connecter</Link></p>
+                    <p className="subtitle">{t('account')} <Link to="/auth" className="lien">{t('login')}</Link></p>
                 </div>
 
                 <p className="btn_actions">
-                    <button type="submit" className="button">S'inscrire</button>
-                    <button type="reset" className="button_outline">Réinitialiser</button>
+                    <button type="submit" className="button">{t('signUp')}</button>
+                    <button type="reset" className="button_outline">{t('reset')}</button>
                 </p>
             </form>
         </div >
