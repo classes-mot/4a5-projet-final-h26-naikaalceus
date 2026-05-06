@@ -11,8 +11,10 @@ const SongList = (props) => {
     const { t } = useTranslation();
     const [songs, setSongs] = useState(() => {
         const storedSongs = localStorage.getItem("songs");
-        return (storedSongs && JSON.parse(storedSongs).length > 0)
-            ? JSON.parse(storedSongs) : props.items;
+        if (storedSongs && JSON.parse(storedSongs).length > 0) {
+            return JSON.parse(storedSongs);
+        }
+        return props.items || [];
     });
 
     const [showModal, setShowModal] = useState(false);
@@ -41,7 +43,7 @@ const SongList = (props) => {
     }
 
     const filterSongs = songs.filter((song) =>
-        song.title.toLowerCase().includes(searchTerm.toLowerCase)
+        song.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     return (

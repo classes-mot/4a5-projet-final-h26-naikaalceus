@@ -13,7 +13,9 @@ const SongForm = () => {
         if (songId) {
             const storedSongs = JSON.parse(localStorage.getItem("songs")) || [];
             const songToEdit = storedSongs.find((song) => song.id === songId);
-            if (songToEdit) { return songToEdit };
+            if (songToEdit) {
+                return songToEdit
+            };
         } return {
             title: "",
             artist: "",
@@ -26,7 +28,7 @@ const SongForm = () => {
 
     useEffect(() => {
         if (songId) {
-            document.title = `t('modal.edit) : ${formData.title}`;
+            document.title = `{t('modal.edit)} : ${formData.title}`;
         } else {
             document.title = "t('songs.addSong)";
         }
@@ -40,8 +42,8 @@ const SongForm = () => {
 
     const validate = () => {
         let errs = {};
-        if (!formData.title.trim()) errs.title = t('errors.artist-error');
-        if (!formData.artist.trim()) errs.artist = t('errors.title-error');
+        if (!formData.title.trim()) errs.title = t('errors.title-error');
+        if (!formData.artist.trim()) errs.artist = t('errors.artist-error');
         setErrors(errs);
         return Object.keys(errs).length === 0;
     };
@@ -77,7 +79,7 @@ const SongForm = () => {
                     </div>
 
                     <div className="control">
-                        <label>{t('songs.title')}</label>
+                        <label>{t('songs.artist')}</label>
                         <input
                             type="text"
                             name="artist"
