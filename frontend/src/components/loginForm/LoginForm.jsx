@@ -42,7 +42,7 @@ export default function LoginForm() {
     return (
         <div className="container">
             <form onSubmit={authSubmitHandler} className="form">
-                <h2 className="title">{t(auth.login)}</h2>
+                <h2 className="title">{t('auth.login')}</h2>
 
                 <hr className="hr_control" />
 
@@ -75,12 +75,12 @@ export default function LoginForm() {
                 <hr className="hr_control" />
 
                 <div>
-                    <p>{t('noAccount')}<Link to="/subscribe" className="lien">{t('auth.signUp')}</Link></p>
+                    <p>{t('signin.noAccount')} <Link to="/subscribe" className="lien">{t('auth.signUp')}</Link></p>
                 </div>
 
                 <div className="btn_actions">
                     <p>
-                        <button type="submit" className="button">{t(auth.login)}</button>
+                        <button type="submit" className="button">{t('auth.login')}</button>
                         <button type="reset" className="button_outline">{t('modal.reset')}</button>
                     </p>
                 </div>
