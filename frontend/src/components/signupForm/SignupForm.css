@@ -7,7 +7,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    background: #ffffff;
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 25px;
     box-shadow: 0 40x 15px #ae9db3;
@@ -51,7 +51,7 @@
 
 .control input {
     padding: 0.5rem;
-    border: 1px solid #5d1d70;
+    border: 1px solid #dfb7eb;
     border-radius: 5px;
     outline: none;
 }
