@@ -29,7 +29,7 @@ export default function LoginForm() {
             valid = false;
         }
 
-        if (!data.password === "") {
+        if (data.password === "") {
             setMdpVide(true);
             valid = false;
         }
