@@ -32,10 +32,10 @@ const Menu = () => {
                     <hr className="hr_control" />
 
                     <div>
-                        <p className="btn-actions">
+                        <div className="btn-actions">
                             <Link to="/songs" className="button">{t('songs.viewSongs')}</Link>
                             <Link to="/tickets" className="button">{t('tickets.viewTickets')}</Link>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </>
