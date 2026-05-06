@@ -21,7 +21,8 @@
         "editSong": "Modfier la chanson",
         "artist": "Artiste",
         "title": "Titre",
-        "releaseYear": "Année de publication"
+        "releaseYear": "Année de publication",
+        "songs": "Chansons"
     },
     "tickets": {
         "viewTickets": "Consulter vos tickets",
@@ -39,7 +40,8 @@
         "date4": "10 juin 2027",
         "date5": "11 juin 2027",
         "package": "Forfait",
-        "basicPackage": "De base"
+        "basicPackage": "De base",
+        "tickets": "Tickets"
     },
     "erreurs": {
         "passwd-error": "Les mots de passe devraient être pareils !",

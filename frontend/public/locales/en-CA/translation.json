@@ -21,7 +21,8 @@
         "editSong": "Edit song",
         "title": "Title",
         "artist": "Artist",
-        "releaseYear": "Release year"
+        "releaseYear": "Release year",
+        "songs": "Songs"
     },
     "tickets": {
         "viewTickets": "View your tickets",
@@ -39,7 +40,8 @@
         "date4": "June 10 2027",
         "date5": "June 11 2027",
         "package": "Package",
-        "basicPackage": "Basic"
+        "basicPackage": "Basic",
+        "tickets": "Tickets"
     },
     "erros": {
         "title-error": "Title required!",
