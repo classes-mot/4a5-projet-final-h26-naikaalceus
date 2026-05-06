@@ -1,7 +1,7 @@
 .form {
     display: flex;
     justify-content: center;
-    background-image: url("../images/OIP-2660696639.jpg");
+    background: #ead1f1;
 }
 
 .form_card {
