@@ -43,7 +43,7 @@
         "basicPackage": "Basic",
         "tickets": "Tickets"
     },
-    "erros": {
+    "errors": {
         "title-error": "Title required!",
         "passwd-error": "Passwords should be the same!",
         "passwd-error1": "Password required!",

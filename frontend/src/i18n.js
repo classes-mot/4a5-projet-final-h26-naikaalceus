@@ -5,18 +5,22 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
     .use(Backend)
-    .use(LanguageDetector) 
+    .use(LanguageDetector)
     .use(initReactI18next)
-        .init({
-            lng: 'fr',
-            fallbackLng: 'en',
-            debug: true,
-            supportedLngs: ['fr', 'en'],
-            load: 'languageOnly',
-            interpolation: {
-                escapeValue: false,
-            },
-        });
+    .init({
+        backend: {
+            loadPath: "locales/{{lng}}/translation.json",
+        },
+        lng: 'fr',
+        fallbackLng: 'en',
+        debug: true,
+        supportedLngs: ['fr', 'en'],
+        load: 'languageOnly',
+        ns: ['messages', 'auth', 'songs', 'tickets', 'errors', 'signup', 'user-infos', 'signin', 'modal'],
+        interpolation: {
+            escapeValue: false,
+        },
+    });
 i18n.on('languageChanged', (lng) => {
     document.documentElement.lang = lng;
 });

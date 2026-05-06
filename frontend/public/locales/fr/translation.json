@@ -13,7 +13,7 @@
         "login": " Se connecter",
         "logout": "Déconnexion"
     },
-    "chansons": {
+    "songs": {
         "viewSongs": "Consulter vos chansons",
         "addSong": "Ajouter une chanson",
         "searchbar_song": "Rechercher une chanson. . .",
@@ -43,27 +43,27 @@
         "basicPackage": "De base",
         "tickets": "Tickets"
     },
-    "erreurs": {
+    "errors": {
         "passwd-error": "Les mots de passe devraient être pareils !",
         "passwd-error1": "Le mot de passe requis !",
         "email-error": "Le courriel est requis !",
         "title-error": "Le titre est requis !",
         "artist-error": "L'artiste est requis !"
     },
-    "inscription": {
+    "signup": {
         "info": "Veuillez entrer vos informations",
         "passwd-confirm": "Confirmer le mot de passe",
         "terms-and-conditions": "J'accepte les conditions générales de ce  site web",
         "newsletter": "Je souhaite m'inscrire à l'infolettres de ce site web",
         "account": "Vous avez déjà un compte ?"
     },
-    "infos-user": {
+    "user-infos": {
         "first-name": "Prénom",
         "last-name": "Nom",
         "email": "Courriel",
         "password": "Mot de passe"
     },
-    "connexion": {
+    "signin": {
         "noAccount": "Vous n'avez pas de compte ?"
     },
     "modal": {
