@@ -7,7 +7,7 @@ import { connectDB } from './util/bd.js';
 
 const app = express();
 
-const PORT = process.env.PORT || 5173;
+const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017//bd-deploy';
 
 app.use(express.json());
