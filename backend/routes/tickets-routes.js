@@ -5,7 +5,6 @@ import checkAuth from '../middleware/check-auth.js';
 
 const router = express.Router();
 
-// Middleware pour obtenir toutes les tâches
 router.get('/', ticketsController.getTickets);
 
 router.get('/:tid', ticketsController.getTicketsById);
@@ -21,11 +20,11 @@ router.post(
         check('location').not().isEmpty(),
         check('date').not().isEmpty(),
     ],
-    ticketsController.createTask
+    ticketsController.createTicket
 );
 
-router.patch('/:tid', ticketsController.updateTask);
+router.patch('/:tid', ticketsController.updateTicket);
 
-router.delete('/:tid', ticketsController.deleteTask);
+router.delete('/:tid', ticketsController.deleteTicket);
 
 export default router;

@@ -5,12 +5,11 @@ import checkAuth from '../middleware/check-auth.js';
 
 const router = express.Router();
 
-// Middleware pour obtenir toutes les tâches
-router.get('/', songsController.getTasks);
+router.get('/', songsController.getSongs);
 
-router.get('/:tid', songsController.getTasksById);
+router.get('/:tid', songsController.getSongsById);
 
-router.get('/user/:uid', songsController.getTasksByUserId);
+router.get('/user/:uid', songsController.getSongsByUserId);
 
 router.use(checkAuth);
 
@@ -22,11 +21,11 @@ router.post(
         check('album').not().isEmpty(),
         check('releaseYear').not().isEmpty(),
     ],
-    songsController.createTask
+    songsController.createSong
 );
 
-router.patch('/:tid', songsController.updateTask);
+router.patch('/:tid', songsController.updateSong);
 
-router.delete('/:tid', songsController.deleteTask);
+router.delete('/:tid', songsController.deleteSong);
 
 export default router;
