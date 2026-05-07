@@ -6,11 +6,11 @@ import checkAuth from '../middleware/check-auth.js';
 const router = express.Router();
 
 // Middleware pour obtenir toutes les tâches
-router.get('/', ticketsController.getTasks);
+router.get('/', ticketsController.getTickets);
 
-router.get('/:tid', ticketsController.getTasksById);
+router.get('/:tid', ticketsController.getTicketsById);
 
-router.get('/user/:uid', ticketsController.getTasksByUserId);
+router.get('/user/:uid', ticketsController.getTicketsByUserId);
 
 router.use(checkAuth);
 
