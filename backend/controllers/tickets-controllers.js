@@ -1,4 +1,4 @@
-import HttpError from '../util/http-error';
+import HttpError from '../util/http-error.js';
 import { validationResult } from 'express-validator';
 import { Ticket } from '../models/tickets.js'
 import { User } from '../models/users.js'
