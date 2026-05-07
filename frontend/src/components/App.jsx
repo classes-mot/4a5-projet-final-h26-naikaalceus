@@ -23,12 +23,27 @@ const App = () => {
     const [userId, setUserId] = useState(storedUserId);
     const [userEmail, setUserEmail] = useState(storedUserEmail);
 
-    const login = (userId, email) => {
+    const login = async (userId, email) => {
+        const urlBackend = import.meta.env.VITE_BACKEND_URL;
         setIsLoggedIn(true);
         setUserId(userId);
         setUserEmail(email);
         sessionStorage.setItem('userId', userId);
         sessionStorage.setItem('userEmail', email);
+        try {
+            const response = await fetch(`${urlBackend}/users/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ userId, email }),
+            });
+            const jsonData = await response.json();
+            console.log('Connexion réussie:', jsonData);
+        } catch (error) {
+            console.error('Connexion échouée', error);
+        }
+
     };
 
     const logout = () => {
