@@ -1,5 +1,5 @@
 {
-  "name": "4a5-prohet-final-h26-naikaalceus",
+  "name": "4a5-projet-final-h26-naikaalceus",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test" : "vitest"
   },
   "dependencies": {
     "i18next": "^26.0.8",
