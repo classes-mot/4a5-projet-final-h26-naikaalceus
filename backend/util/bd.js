@@ -10,7 +10,7 @@ export const connectDB = async () => {
     try {
         await mongoose.connect(uri);
         isConnected = true;
-        console.loh("Connectée à la BD avec succès !");
+        console.log("Connectée à la BD avec succès !");
     } catch (err) {
         console.log('Erreur lors de la connexion', err);
         process.exit(1);
